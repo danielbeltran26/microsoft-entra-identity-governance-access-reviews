@@ -1,6 +1,7 @@
 # Access review architecture and lifecycle
 
 ## Components
+
 | Component | Responsibility | Boundary |
 |---|---|---|
 | IAM-Admin | Configure reviews, maintain groups and execute authorized manual follow-up | Existing PIM-controlled administration |
@@ -11,6 +12,7 @@
 | P2 assignments | Entitle the five participants | Direct user assignments, independent of reviewed groups |
 
 ## Review and validation flow
+
 ```mermaid
 flowchart TD
     A[Verified membership baseline] --> B[Finance and Operations reviews]
@@ -26,4 +28,4 @@ flowchart TD
     I --> J[Exception expiry and recovery]
 ```
 
-This is the intended process. M2 establishes the groups and design; reviews, automatic application and manual follow-up remain unexecuted. The control group never enters the review scope. EXC-001 expiry and recovery cleanup are separate manual actions. None of these groups is assigned to an application, and no application-access revocation is asserted.
+This is the intended process. M2 establishes the groups and design; reviews, automatic application and manual follow-up remain unexecuted. The control group never enters the review scope. EXC-001 expiry and recovery cleanup are separate manual actions. Application access is outside the scope; these groups have no application assignments.

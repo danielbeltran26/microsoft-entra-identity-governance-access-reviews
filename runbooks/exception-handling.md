@@ -1,6 +1,7 @@
 # Temporary exception handling
 
 ## EXC-001
+
 | Field | Value |
 |---|---|
 | Status | Planned; reviewer approval and enforcement pending |
@@ -13,6 +14,7 @@
 | Enforcement | Manual membership removal and independent verification |
 
 ## Procedure
+
 1. Confirm the exception remains valid and the planned review deadline precedes expiry.
 2. Record the approval justification with EXC-001 and its expiry when reviewing the Finance membership.
 3. After review application, verify that the account remains a direct Finance member. Preserve this result.

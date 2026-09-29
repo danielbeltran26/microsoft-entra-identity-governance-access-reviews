@@ -1,21 +1,21 @@
 # M2 - Validation plan and execution gates
 
-## Confirmed setup
-- Five dedicated users created; enabled states and direct P2 assignments confirmed by the operator.
-- Three groups and their 4/2/2 direct-member counts and IAM-Admin ownership confirmed by the operator.
-- Reviewer password change, My Access sign-in and Authenticator registration confirmed.
-- Three baseline files validated locally: present, nonempty, distinct SHA256 hashes; no additional M02 PNG files reported.
+## Baseline
 
-These statements do not certify review execution or independently observed tenant state. Screenshot hashes identify files; no M02 screenshot content inspection is claimed by this document.
+Five dedicated accounts have direct P2 assignments. AR-Finance-Access contains four direct members, AR-Operations-Access contains two, and AR-Control-Access contains two. IAM-Admin owns all three groups. The reviewer has accessed My Access and registered Microsoft Authenticator.
+
+The [membership baseline](../data/m02-membership-baseline.csv) and [screenshots](evidence-register.md) establish the starting member sets for the tests below. Review execution and outcome validation remain pending.
 
 ## Gates before review creation
-1. Resolve each of the five users and three groups to a unique object ID. Keep the exact mapping in the excluded temporary working area; use stable aliases in documentation. Obtain fresh direct-member lists keyed by object ID and verify the 4/2/2 baseline.
-2. Confirm the review creator has an active supported role for this scope. Use the least-privileged available assignment; maintain PIM eligibility and approval controls. Record the actual role and activation interval rather than an assumed renewal.
+
+1. Resolve each of the five users and three groups to a unique object ID. Obtain fresh direct-member lists keyed by object ID and verify the 4/2/2 baseline.
+2. Confirm the review creator has an active supported role for this scope. Use the least-privileged available assignment; maintain PIM eligibility and approval controls. Record the role and activation interval.
 3. Verify effective reviewer authentication and record whether an actual sign-in satisfied MFA. Registration alone does not close this gate. If policy changes are necessary, treat them as a separate scoped change before execution.
 4. Confirm participant entitlements remain active and the selected review features are available under the trial.
 5. Inspect the final review settings and actual timestamps. Ensure the one-day review can complete before EXC-001 expiry and within the licensed period.
 
 ## Outcome validation
+
 | Test | Expected result | Required observation |
 |---|---|---|
 | Retain | ar-finance-01 remains in Finance | Approved decision and fresh membership read |
@@ -26,10 +26,8 @@ These statements do not certify review execution or independently observed tenan
 | Control | Exact membership set unchanged | Object-ID set equality before and after |
 | Recovery | Mover Finance membership restored then removed again | Prior removal evidence, specific authorization, restore verification and final cleanup verification |
 
-Capture the review result and application status, then independently read current group membership. Pending processing, application errors and set mismatches remain unresolved. Preserve native outcomes before any manual recovery. Do not convert manual remediation into an automated success claim.
+Capture the review result and application status, then independently read current group membership. Pending processing, application errors and set mismatches remain unresolved. Preserve native outcomes before any manual recovery. Record manual remediation separately from native review application.
 
 ## Final expected state
-Finance: ar-finance-01 only. Operations: ar-mover-01 only. Control: ar-finance-01 and ar-mover-01. The reviewer is not a member of any of these groups; the leaver stays disabled. P2 assignments remain direct and are not removed by membership remediation.
 
-## Evidence allocation
-M02-E01 through M02-E03 are allocated to the three baseline images in the evidence register. Use a new identifier for every new observation. Never overwrite a baseline capture or claim a design table as execution evidence.
+Finance: ar-finance-01 only. Operations: ar-mover-01 only. Control: ar-finance-01 and ar-mover-01. The reviewer is not a member of any of these groups; the leaver stays disabled. P2 assignments remain direct and are not removed by membership remediation.
