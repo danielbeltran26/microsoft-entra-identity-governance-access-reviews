@@ -1,0 +1,16 @@
+/temporary/
+/.vscode/
+/.idea/
+.env
+.env.*
+*.pfx
+*.p12
+*.key
+*.pem
+*.log
+*.tmp
+*.bak
+~$*
+Thumbs.db
+Desktop.ini
+.DS_Store
