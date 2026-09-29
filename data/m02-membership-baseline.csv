@@ -1,0 +1,9 @@
+GroupAlias,UserAlias,MembershipType,ObservationDate,Source
+AR-Finance-Access,ar-finance-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Finance-Access,ar-mover-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Finance-Access,ar-leaver-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Finance-Access,ar-exception-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Operations-Access,ar-mover-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Operations-Access,ar-leaver-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Control-Access,ar-finance-01,Direct,2026-09-30,Operator-confirmed portal baseline
+AR-Control-Access,ar-mover-01,Direct,2026-09-30,Operator-confirmed portal baseline

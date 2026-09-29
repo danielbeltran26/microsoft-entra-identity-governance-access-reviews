@@ -1,13 +1,19 @@
 # Recovery design
 
-Status: planned; execution validation belongs to M4.
+Status: planned; execution and validation belong to M4.
 
-1. Record exact in-scope user and group object IDs and direct memberships before changes.
-2. Preserve reviewer decisions and the post-remediation membership evidence before recovery.
-3. Obtain and record the lab recovery authorisation and business reason.
-4. Restore only the intentionally removed test membership identified in the recovery case.
-5. Query membership again and compare with the approved recovery target.
-6. Check the control group and unrelated memberships remain unchanged.
-7. Record recovery as a separate event so the original denied-access outcome remains traceable.
+## Controlled recovery target
+Restore only ar-mover-01 as a direct member of AR-Finance-Access. This is a temporary recovery exercise after successful remediation, not a renewed business entitlement. IAM-Admin records a specific authorization before execution; no authorization event is claimed at M2.
 
-Do not restore all memberships indiscriminately, alter existing PIM policies, weaken Conditional Access or use emergency accounts for routine operations. A failed or unexpected remediation requires investigation before further membership changes. Exact commands and portal steps will be finalised against the M2 inventory.
+## Procedure
+1. Resolve the exact user and group object IDs against the pre-execution mapping.
+2. Preserve the denied Finance decision, completed application status and a fresh membership read proving the mover is absent.
+3. Record the recovery authorization, reason, target and executor.
+4. Open Entra ID > Groups > All groups > AR-Finance-Access > Members > Add members. Select only ar-mover-01 and confirm.
+5. Refresh and independently verify that the exact membership was restored. Preserve this as a separate recovery event.
+6. Confirm Operations and Control membership are unchanged.
+7. Remove the restored ar-mover-01 membership from Finance and verify it is absent again. Preserve cleanup evidence.
+
+The expected Finance set after cleanup depends on EXC-001: before expiry, ar-finance-01 and ar-exception-01; after exception enforcement, ar-finance-01 only. Operations remains ar-mover-01; Control remains ar-finance-01 and ar-mover-01. Do not restore the leaver, re-enable sign-in, weaken Conditional Access or use emergency accounts for routine recovery.
+
+Stop on an unexpected outcome and investigate before further writes. Record every manual action separately from native review application.

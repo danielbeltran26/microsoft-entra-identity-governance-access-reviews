@@ -1,0 +1,9 @@
+GroupAlias,UserAlias,PlannedDecision,ExpectedAfterReview,ExpectedFinal,Status
+AR-Finance-Access,ar-finance-01,Approve,Present,Present,Expected; not executed
+AR-Finance-Access,ar-mover-01,Deny,Absent,Absent,Expected; not executed
+AR-Finance-Access,ar-leaver-01,Deny,Absent,Absent,Expected; not executed
+AR-Finance-Access,ar-exception-01,Approve with EXC-001,Present,Absent,Expected; not executed
+AR-Operations-Access,ar-mover-01,Approve,Present,Present,Expected; not executed
+AR-Operations-Access,ar-leaver-01,No decision; deadline fallback,Absent,Absent,Expected; not executed
+AR-Control-Access,ar-finance-01,Out of scope,Present,Present,Expected; not executed
+AR-Control-Access,ar-mover-01,Out of scope,Present,Present,Expected; not executed
