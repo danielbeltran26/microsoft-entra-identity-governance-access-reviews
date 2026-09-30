@@ -1,6 +1,6 @@
 # M2 - Review design
 
-Status: planned; no review definition or decision has been executed.
+Status at M2: planned. See [M3 execution](m03-review-execution.md) for the subsequently created reviews and recorded decisions.
 
 ## Review configuration
 

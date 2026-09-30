@@ -6,7 +6,7 @@ Design and validate access recertification for assigned membership in dedicated 
 
 ## Status
 
-M1 foundation and M2 membership baseline and review design are documented. Five dedicated users and three groups have been created. Participant P2 assignments, direct memberships and ownership were confirmed in the portal. The reviewer completed initial sign-in, password change and Microsoft Authenticator registration. No access reviews have been created; no review decisions, automated remediation or exception-expiry actions have been executed.
+M1 and M2 are complete. M3 review configuration and reviewer decisions were verified on 30 September 2026. Finance and Operations reviews are active; five decisions have been submitted and the Operations leaver remains deliberately unanswered. Native result application, independent post-review membership validation, exception removal and recovery remain pending.
 
 ## Milestones
 
@@ -14,7 +14,7 @@ M1 foundation and M2 membership baseline and review design are documented. Five 
 |---|---|---|
 | M1 | Foundation, licensing and scope | Foundation baseline complete |
 | M2 | Access inventory and review design | Baseline and design documented; execution gates listed |
-| M3 | Review configuration and execution | Pending |
+| M3 | Review configuration and execution | Reviews active; decisions recorded; deadline processing pending |
 | M4 | Remediation, exceptions and independent validation | Pending |
 | M5 | Operational handover and final assurance | Pending |
 
@@ -23,6 +23,10 @@ M1 foundation and M2 membership baseline and review design are documented. Five 
 Finance and Operations use separate one-time group reviews. A third control group remains outside review scope. The design covers retained membership, obsolete mover and leaver membership, deadline-driven non-response, a manually enforced temporary exception, and controlled recovery. Existing hybrid identity, Conditional Access, PIM and emergency-access configurations remain outside remediation scope.
 
 ## Documentation
+
+- [M3 review execution](docs/m03-review-execution.md)
+- [Reviewer authentication and administration](docs/m03-authentication-and-administration.md)
+- [Recorded reviewer decisions](docs/m03-decision-record.md)
 
 - [Foundation baseline](docs/m01-foundation-baseline.md)
 - [Scope and acceptance criteria](docs/m01-scope-and-acceptance.md)
@@ -39,7 +43,7 @@ Finance and Operations use separate one-time group reviews. A third control grou
 
 ## Limitations
 
-Review execution and remediation testing are pending. Before review creation, resolve the user and group object IDs and verify current memberships and reviewer MFA enforcement. The reviewer accesses reviews through My Access; email delivery is untested. The scope covers group membership, with no application assignments. EXC-001 uses manual removal at expiry.
+Pre-review object-ID resolution and baseline membership checks passed. Reviewer MFA satisfaction was verified through CA011. Remediation testing remains pending. The reviewer accesses reviews through My Access; email delivery is untested. The scope covers group membership, with no application assignments. EXC-001 uses manual removal at expiry.
 
 The P2 trial was observed to expire on 6 October 2026. Complete premium operations and evidence collection by 5 October or establish valid licence continuity. Advanced Governance-only features are outside the selected design.
 

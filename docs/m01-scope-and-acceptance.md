@@ -26,4 +26,4 @@ Temporary exceptions require a named owner, expiry and enforcement procedure, de
 
 ## Completion boundary
 
-Compare expected and observed membership using object IDs and fresh reads after decision application. Report pending processing or mismatches as unresolved, not successful. Record any manual remediation separately from native decision application. Review creation, decisions and remediation remain pending.
+Compare expected and observed membership using object IDs and fresh reads after decision application. Report pending processing or mismatches as unresolved, not successful. Record any manual remediation separately from native decision application. At the M1 baseline, review creation, decisions and remediation were pending. See [M3 execution](m03-review-execution.md) for subsequent progress.

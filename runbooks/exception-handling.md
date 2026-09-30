@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Status | Planned; reviewer approval and enforcement pending |
+| Status | Approved on 30 September 2026; post-review retention verification and expiry enforcement pending |
 | Identity | ar-exception-01 |
 | Group | AR-Finance-Access |
 | Business rationale | Temporary completion of the synthetic Finance handover |

@@ -40,7 +40,7 @@ ar-reviewer-01 completed its initial password change, accessed My Access and reg
 | CA005-GRANT-MFA-SecurityInfoRegistration-AllUsers | GG_CA_Pilot_Workforce | Register security information; authentication strength selected |
 | CA009-SESSION-NoPersistentBrowser-Contractors | GG_IAM_All_Contractors | All resources; one configured condition |
 
-All three policies are enabled. CA004 and CA005 include GG_CA_Pilot_Workforce rather than all tenant users. The reviewer still requires an effective-policy assessment, including the applicable authentication strength and exclusions. Existing Conditional Access and authentication-method policies were unchanged during setup.
+All three policies are enabled. CA004 and CA005 include GG_CA_Pilot_Workforce rather than all tenant users. At M2, the reviewer required an effective-policy assessment. The subsequent scoped CA011 change and sign-in validation are documented in [M3 authentication](m03-authentication-and-administration.md). Existing Conditional Access and authentication-method policies were unchanged during setup.
 
 ## Administrative boundary
 

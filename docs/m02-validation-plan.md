@@ -4,7 +4,7 @@
 
 Five dedicated accounts have direct P2 assignments. AR-Finance-Access contains four direct members, AR-Operations-Access contains two, and AR-Control-Access contains two. IAM-Admin owns all three groups. The reviewer has accessed My Access and registered Microsoft Authenticator.
 
-The [membership baseline](../data/m02-membership-baseline.csv) and [screenshots](evidence-register.md) establish the starting member sets for the tests below. Review execution and outcome validation remain pending.
+The [membership baseline](../data/m02-membership-baseline.csv) and [screenshots](evidence-register.md) establish the starting member sets for the tests below. This document records the M2 validation plan. See [M3 execution](m03-review-execution.md) for completed pre-review checks and decisions; outcome validation remains pending.
 
 ## Gates before review creation
 
