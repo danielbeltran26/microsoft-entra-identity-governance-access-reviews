@@ -1,5 +1,8 @@
 # M2 - Validation plan and execution gates
 
+> Historical milestone observation. EXC-001 was subsequently closed on 1 October 2026. The [M5 final acceptance record](m05-final-acceptance.md) supersedes pending items and pre-closure member sets below.
+
+
 ## Baseline
 
 Five dedicated accounts have direct P2 assignments. AR-Finance-Access contains four direct members, AR-Operations-Access contains two, and AR-Control-Access contains two. IAM-Admin owns all three groups. The reviewer has accessed My Access and registered Microsoft Authenticator.

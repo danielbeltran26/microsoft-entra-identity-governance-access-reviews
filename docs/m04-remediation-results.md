@@ -1,5 +1,8 @@
 # M4 - Native remediation results
 
+> Historical milestone observation. EXC-001 was subsequently closed on 1 October 2026. The [M5 final acceptance record](m05-final-acceptance.md) supersedes pending items and pre-closure member sets below.
+
+
 ## Status and execution boundary
 
 Finance and Operations native membership removals were verified on 30 September 2026. Both review instances were ended early by the administrator and their configured automatic application processed the results. No manual Apply action or direct group removal was used to implement these native outcomes. The later Finance restoration and cleanup were a separate authorized recovery exercise.

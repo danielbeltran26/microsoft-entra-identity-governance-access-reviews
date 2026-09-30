@@ -30,4 +30,4 @@ Compare expected and observed membership using object IDs and fresh reads after 
 
 ## M4 execution update
 
-The original scheduled-deadline nonresponse criterion above was not exercised. Operations was deliberately ended early on 30 September 2026; the platform then applied the configured fallback. See [M4 acceptance status](m04-acceptance-status.md) for the recorded deviation, verified outcomes and open requirements.
+The original scheduled-deadline nonresponse criterion above was not exercised. Operations was deliberately ended early on 30 September 2026; the platform then applied the configured fallback. See [M4 acceptance status](m04-acceptance-status.md) for the recorded deviation, verified outcomes and the subsequent [M5 closure](m05-final-acceptance.md). The authorized execution change replaces scheduled-end testing with early-completion nonresponse testing for laboratory acceptance; it does not establish scheduled-closure behavior.

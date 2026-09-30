@@ -40,3 +40,13 @@ Observation date: 30 September 2026 (Europe/London).
 | M04-E04 | [m04-04-finance-recovery-cleanup.png](../screenshots/m04-04-finance-recovery-cleanup.png) | Recovery cleanup; Finance returns to two members | 75563 | 607EAACBB1EC897CC3C207456ABDA16A94D174EFFC60D8F7DA7B9ECD12F2DD21 |
 | M04-E05 | [m04-05-operations-membership-after-review.png](../screenshots/m04-05-operations-membership-after-review.png) | Operations contains only mover | 73789 | CF3A9D4C67A10400626AA84D87F4C4DDB6B7DB9B303B0A9D11AC62EBBCEA5319 |
 | M04-E06 | [m04-06-operations-auto-review-audit.png](../screenshots/m04-06-operations-auto-review-audit.png) | Successful early end, Auto Review and Apply decision events | 70790 | EF5113556F7B5F29FF29F3773DDACD9A7671A2589B83159710B7C78FB8F58322 |
+
+## M4 exception closure
+
+Observation date: 1 October 2026 (Europe/London).
+
+| ID | File | Observation | Bytes | SHA256 |
+|---|---|---|---:|---|
+| M04-E07 | [m04-07-finance-exception-closed.png](../screenshots/m04-07-finance-exception-closed.png) | Finance contains only ar-finance-01 after authorized early exception removal | 72376 | 00D3F5BB1E4BE46FDD1A5E5FD864E2451252C3CBBD8A44FC6E57FDFB35126813 |
+
+The final Graph output and inspected removal audit observations are transcribed with provenance in [final acceptance](m05-final-acceptance.md) and [exception closure](m04-exception-closure.md). They are not additional retained screenshots.

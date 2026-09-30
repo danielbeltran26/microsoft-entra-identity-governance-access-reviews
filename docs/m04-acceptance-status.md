@@ -1,5 +1,8 @@
 # M4 - Acceptance status
 
+> Historical milestone observation. EXC-001 was subsequently closed on 1 October 2026. The [M5 final acceptance record](m05-final-acceptance.md) supersedes pending items and pre-closure member sets below.
+
+
 Observation cutoff: 30 September 2026, 23:48:50 BST. This record distinguishes completed outcomes from remaining acceptance requirements.
 
 | Case | Status | Evidence or remaining action |

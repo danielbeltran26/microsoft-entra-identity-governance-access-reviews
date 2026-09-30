@@ -2,9 +2,9 @@
 
 ## Implementation status
 
-**Status: M1–M3 recorded; M4 native remediation and recovery verified in the portal.** Finance and Operations were ended early on 30 September 2026. Native application removed the mover and leaver from Finance and the unanswered leaver from Operations. Controlled Finance restoration and cleanup also passed.
+**Status: M1–M5 complete for the revised controlled laboratory scope.** Native Finance and Operations remediation, nonresponse handling, recovery, and authorized early exception closure were verified. The final Graph check on 1 October 2026 at 00:04:44 BST matched Finance 1, Operations 1 and Control 2; the leaver remained disabled and the reviewer outside all three groups.
 
-The final consolidated object-ID comparison passed at 23:48:50 BST on 30 September. EXC-001 enforcement remains open. M4 and the project are not represented as fully closed. The [acceptance record](docs/m04-acceptance-status.md) states the exact boundaries.
+Both reviews were ended early. Scheduled closure was not exercised; EXC-001 was removed manually before its original expiry. These limits and the authorized execution changes remain explicit in the [final acceptance record](docs/m05-final-acceptance.md).
 
 This controlled synthetic implementation follows group membership from baseline inventory through business attestation to verified remediation. Completion applies only to the documented laboratory scope; no production deployment or application-access revocation is claimed.
 
@@ -20,8 +20,8 @@ This controlled synthetic implementation follows group membership from baseline 
 | Administration and attestation | IAM-Admin configures reviews; ar-reviewer-01 makes decisions without a directory role |
 | Reviewer authentication | Scoped CA011 policy succeeded; MFA was satisfied through a prior authentication claim |
 | Decision state | Finance: two approved, two denied; Operations: one approved, one platform denial after nonresponse |
-| Exception | EXC-001 approved for Finance handover until 3 October 2026, 18:00 Europe/London (17:00 UTC); manual enforcement required |
-| Outcome boundary | Native removals, recovery and final object-ID membership comparison verified; exception enforcement remains open |
+| Exception | EXC-001 closed early by IAM-Admin on 1 October 2026 at 00:01:46 BST; original approval and expiry preserved |
+| Outcome boundary | Native removals, recovery, manual exception closure and final object-ID membership comparison verified |
 
 ## Business scenario and objective
 
@@ -31,7 +31,7 @@ The implementation must demonstrate justified retention, obsolete-access removal
 
 ## Architecture and control flow
 
-Finance and Operations have separate one-time reviews. Their decisions feed native result application, followed by independent member-set comparison. Control-group membership is compared before and after but never enters review scope. Manual exception expiry and recovery occur after native outcome evidence is preserved.
+Finance and Operations have separate one-time reviews. Their decisions feed native result application, followed by independent member-set comparison. Control-group membership is compared before and after but never enters review scope. Manual exception closure and recovery occur after native outcome evidence is preserved.
 
 The [access review architecture and lifecycle](architecture/access-review-lifecycle.md) documents the control flow and responsibilities. The reviewed groups have direct assigned user membership, are cloud-created and non-role-assignable, and have no application assignments. Hybrid groups, privileged-role assignments and unrelated identities remain outside membership remediation.
 
@@ -41,7 +41,7 @@ The [access review architecture and lifecycle](architecture/access-review-lifecy
 - Separation of review administration and business attestation.
 - Reviewer MFA enforcement and sign-in evidence interpretation.
 - One-time group reviews, required justifications and automatic result application.
-- Deliberate nonresponse, manual exception expiry and an excluded control group.
+- Deliberate nonresponse, owner-authorized manual exception closure and an excluded control group.
 - Independent membership comparison, audit reconciliation and controlled recovery.
 - Milestone evidence, operational ownership and final acceptance criteria.
 
@@ -51,9 +51,9 @@ The [access review architecture and lifecycle](architecture/access-review-lifecy
 | --- | --- | --- |
 | M1 — Foundation | Establish licensing, delegation baseline, resource boundaries and acceptance criteria | Complete |
 | M2 — Baseline and design | Create participants and groups; verify baseline memberships; define review decisions and outcome tests | Complete |
-| M3 — Configuration and execution | Configure reviewer authentication and reviews; record justified decisions | Configuration and five reviewer decisions recorded |
-| M4 — Remediation and exceptions | Validate native application, exact memberships, exception removal and recovery | Native outcomes, recovery and final ID check verified; exception enforcement open |
-| M5 — Operational handover | Reconcile final outcomes, document ownership and complete assurance | Pending |
+| M3 — Configuration and execution | Configure reviewer authentication and reviews; record justified decisions | Complete; five explicit decisions and one subsequent platform denial |
+| M4 — Remediation and exceptions | Validate native application, exact memberships, exception removal and recovery | Complete within revised scope; early manual exception closure verified |
+| M5 — Operational handover | Reconcile final outcomes, document ownership and complete assurance | Complete; retained limitations and operating guidance documented |
 
 ## Milestone 1: foundation and review readiness
 
@@ -140,7 +140,21 @@ Finance native removals succeeded at 22:38:13 BST. IAM-Admin temporarily restore
 
 ![Operations early completion and automatic application audit](screenshots/m04-06-operations-auto-review-audit.png)
 
-The original scheduled-deadline test was replaced during execution with early-completion nonresponse testing. This distinction is retained in the [M4 remediation record](docs/m04-remediation-results.md). See [recovery validation](docs/m04-recovery-validation.md) and [acceptance status](docs/m04-acceptance-status.md). EXC-001 remains approved until its documented expiry.
+The original scheduled-deadline test was replaced during execution with early-completion nonresponse testing. This distinction is retained in the [M4 remediation record](docs/m04-remediation-results.md). See [recovery validation](docs/m04-recovery-validation.md) and [acceptance status](docs/m04-acceptance-status.md). EXC-001 was subsequently closed early on 1 October; the table above preserves the pre-closure state.
+
+## Milestone 5: final acceptance and handover
+
+The owner authorized early EXC-001 closure to complete the laboratory exercise. IAM-Admin removed the exception membership at 00:01:46 BST on 1 October; the audit showed Success. A fresh Graph check at 00:04:44 BST matched all expected current member sets and account states without tenant changes.
+
+| Group | Final members | Count |
+|---|---|---:|
+| AR-Finance-Access | ar-finance-01 | 1 |
+| AR-Operations-Access | ar-mover-01 | 1 |
+| AR-Control-Access | ar-finance-01; ar-mover-01 | 2 |
+
+![Finance final membership after exception closure](screenshots/m04-07-finance-exception-closed.png)
+
+See [exception closure](docs/m04-exception-closure.md), [final acceptance](docs/m05-final-acceptance.md), [operational handover](docs/m05-operational-handover.md), and [final membership data](data/m05-final-membership.csv). Earlier milestone evidence remains a chronological record; its member counts are not the final state.
 
 ## Security and engineering controls
 
@@ -150,7 +164,7 @@ The original scheduled-deadline test was replaced during execution with early-co
 | Independent attestation | Dedicated reviewer account has no directory role and no project-group membership |
 | Business justification | Explicit decisions record retained need, transfer, departure or EXC-001 |
 | Nonresponse | Operations leaver left unanswered; platform denial and successful removal verified after early completion |
-| Exception ownership | IAM-Admin is responsible for manual removal and verification at the recorded expiry |
+| Exception ownership | IAM-Admin performed authorized early manual removal; final absence independently verified |
 | Independent validation | Fresh membership reads must confirm outcomes separately from reviewer decisions |
 | Recovery | Restore only an expressly authorized test membership after preserving native removal evidence |
 | Evidence handling | Published evidence excludes complete tenant UPNs and authentication secrets |
@@ -167,17 +181,17 @@ The original scheduled-deadline test was replaced during execution with early-co
 
 These references explain the design and supported behavior. They do not establish that every production recommendation has been implemented or that unobserved outcomes have passed.
 
-## Operational ownership and next validation
+## Operational ownership and final validation
 
 | Activity | Responsible account | Trigger or deadline |
 | --- | --- | --- |
 | Business attestation | ar-reviewer-01 | Five explicit reviewer decisions; Operations nonresponse later resolved by the platform |
 | Native application and member-set verification | IAM-Admin | Native processing after administrator early completion; final consolidated ID check passed |
-| EXC-001 removal and verification | IAM-Admin | 3 October 2026, 18:00 Europe/London (17:00 UTC) |
+| EXC-001 removal and verification | IAM-Admin | Completed early on 1 October 2026; original deadline retained in history |
 | Controlled recovery | Authorized administrator | Completed for Finance mover after native removal evidence and explicit authorization |
-| Final assurance and operational handover | IAM-Admin | After all outcome tests complete; planned before trial expiry |
+| Final assurance and operational handover | IAM-Admin | Final verification passed on 1 October; operating guidance documented |
 
-Expected membership after native application is Finance: ar-finance-01 and ar-exception-01; Operations: ar-mover-01; Control: ar-finance-01 and ar-mover-01. After EXC-001 removal and recovery cleanup, Finance should contain only ar-finance-01. The pre-expiry sets were observed in the portal. The post-expiry Finance set remains an expected future state.
+Final verified membership after exception closure is Finance: ar-finance-01; Operations: ar-mover-01; Control: ar-finance-01 and ar-mover-01. This was reached by authorized early manual removal, not by waiting for the original expiry. Repeat validation with `-ExceptionClosed` as described in the handover.
 
 ## Documentation map
 
@@ -201,6 +215,10 @@ Expected membership after native application is Finance: ar-finance-01 and ar-ex
 | M4 recovery | [Recovery validation](docs/m04-recovery-validation.md) |
 | M4 acceptance | [Acceptance status](docs/m04-acceptance-status.md) |
 | Final membership validation | [Read-only Graph script](scripts/Test-ARMembership.ps1) |
+| M4 exception closure | [Closure record](docs/m04-exception-closure.md) |
+| M5 acceptance | [Final acceptance](docs/m05-final-acceptance.md) |
+| M5 handover | [Operational handover](docs/m05-operational-handover.md) |
+| Final membership data | [Member sets](data/m05-final-membership.csv) |
 | Evidence | [Evidence register](docs/evidence-register.md) |
 
 ## Technical documentation structure
@@ -217,14 +235,14 @@ Expected membership after native application is Finance: ar-finance-01 and ar-ex
 
 ## Limitations and production improvements
 
-- Native application, nonresponse removal and recovery were verified in the portal. The final object-ID comparison passed; exception enforcement remains open.
+- Native application, nonresponse removal, recovery and early manual exception closure were verified. Final object-ID comparisons passed. Scheduled closure and original-deadline exception enforcement were not tested.
 - Both reviews were ended early. Operations end and application audit times were retained; the exact Finance stop time was not. Scheduled closure was not tested.
 - Finance's full creation summary was inspected. Operations' scope, dates and completion settings were inspected, but its full settings summary has not been retained.
 - The lab uses one-day, one-time reviews. Production scheduling must reflect business ownership, resource risk and representative review windows.
-- EXC-001 requires manual removal. No native expiring membership or automated scheduler is configured.
+- EXC-001 was manually removed early. No native expiring membership or automated scheduler was configured.
 - IAM-Admin used Global Administrator. The PIM maximum was changed to 24 hours and a 24-hour activation was confirmed; this is a documented lab choice, not a least-privileged production recommendation. Narrower supported administrative roles and shorter task-bound activation should be evaluated for production.
 - The role-policy change affects eligible Global Administrator activations; exact activation timestamps and a complete post-change policy export were not captured. Earlier PIM project records remain historical baselines.
-- Participant P2 assignments were confirmed. The observed trial expiry is 6 October 2026; the plan is to finish premium operations and evidence collection by 5 October or establish licence continuity.
+- Participant P2 assignments were confirmed. The observed trial expiry is 6 October 2026; the documented premium operations completed on 1 October. Future premium work requires licence continuity.
 - These groups have no application assignments. Membership remediation does not demonstrate session termination or downstream application-access revocation.
 
 ## Authoritative Microsoft references
