@@ -28,4 +28,4 @@ flowchart TD
     I --> J[Exception expiry and recovery]
 ```
 
-This is the intended process. M2 establishes the groups and design; reviews, automatic application and manual follow-up remain unexecuted. The control group never enters the review scope. EXC-001 expiry and recovery cleanup are separate manual actions. Application access is outside the scope; these groups have no application assignments.
+This is the intended process. M2 established the groups and review design. M3 created both reviews and recorded five reviewer decisions, leaving the Operations leaver unanswered. Automatic application and manual follow-up remain pending. The control group never enters the review scope. EXC-001 expiry and recovery cleanup are separate manual actions. Application access is outside the scope; these groups have no application assignments.
