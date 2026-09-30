@@ -14,3 +14,7 @@ Reviewer: ar-reviewer-01. Decision details inspected in My Access on 30 Septembe
 The exception approval audit event also showed Success at 14:01:57 local time. EXC-001 is an ordinary approval with a documented manual expiry obligation, not a native expiring membership. Its enforcement remains pending.
 
 Submitted decisions are distinct from applied outcomes. No membership removal is claimed by this record. See [execution status](m03-review-execution.md) and [exception handling](../runbooks/exception-handling.md).
+
+## Subsequent M4 outcome
+
+This document preserves the M3 observation point. Both reviews were subsequently ended early and native outcomes were applied on 30 September. See [M4 remediation results](m04-remediation-results.md) and [acceptance status](m04-acceptance-status.md) for current outcomes and remaining requirements.

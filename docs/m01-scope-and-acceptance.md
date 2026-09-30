@@ -27,3 +27,7 @@ Temporary exceptions require a named owner, expiry and enforcement procedure, de
 ## Completion boundary
 
 Compare expected and observed membership using object IDs and fresh reads after decision application. Report pending processing or mismatches as unresolved, not successful. Record any manual remediation separately from native decision application. At the M1 baseline, review creation, decisions and remediation were pending. See [M3 execution](m03-review-execution.md) for subsequent progress.
+
+## M4 execution update
+
+The original scheduled-deadline nonresponse criterion above was not exercised. Operations was deliberately ended early on 30 September 2026; the platform then applied the configured fallback. See [M4 acceptance status](m04-acceptance-status.md) for the recorded deviation, verified outcomes and open requirements.

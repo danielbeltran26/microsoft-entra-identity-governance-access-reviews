@@ -31,3 +31,7 @@ Capture the review result and application status, then independently read curren
 ## Final expected state
 
 Finance: ar-finance-01 only. Operations: ar-mover-01 only. Control: ar-finance-01 and ar-mover-01. The reviewer is not a member of any of these groups; the leaver stays disabled. P2 assignments remain direct and are not removed by membership remediation.
+
+## M4 execution update
+
+The table above preserves the original plan. The executed nonresponse test used administrator early completion rather than the scheduled deadline. Native removals and recovery were observed; final consolidated object-ID verification passed at 23:48:50 BST on 30 September. EXC-001 expiry enforcement remains open. See [M4 acceptance status](m04-acceptance-status.md).

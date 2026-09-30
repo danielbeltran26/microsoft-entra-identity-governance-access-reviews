@@ -38,3 +38,7 @@ Record the actual completion/application timestamps and any processing failure. 
 ## Evidence
 
 See [M3 evidence](evidence-register.md#m3-review-execution). Retained screenshots show authentication and review progress; detailed justifications were inspected in My Access and transcribed into the decision record. The four screenshots do not independently evidence every configuration field or justification.
+
+## Subsequent M4 outcome
+
+This document preserves the M3 observation point. Both reviews were subsequently ended early and native outcomes were applied on 30 September. See [M4 remediation results](m04-remediation-results.md) and [acceptance status](m04-acceptance-status.md) for current outcomes and remaining requirements.
